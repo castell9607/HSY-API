@@ -7,8 +7,8 @@ import os
 import pprint
 import sys
 
-from dentsu_pkgs.aws_helpers import get_secret
-from dentsu_pkgs.misc_helpers import flatten_json
+from aws_helpers import get_secret
+from misc_helpers import flatten_json
 
 from datetime import datetime, timedelta
 from facebook_business.api import FacebookAdsApi
