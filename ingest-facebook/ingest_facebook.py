@@ -144,11 +144,15 @@ if __name__ == "__main__":
             continue
         account_name = act.api_get(fields=[AdAccount.Field.name])["name"]
 
-        startDate = datetime(int(os.environ["START_YEAR"]), int(os.environ["START_MONTH"]), int(os.environ["START_DAY"]))
-        endDate = datetime(int(os.environ["END_YEAR"]), int(os.environ["END_MONTH"]), int(os.environ["END_DAY"]))
-        datesRange = [startDate + timedelta(days=n) for n in range((endDate - startDate).days + 1)]
+        # if automated;
+        if os.getenv("IS_AUTOMATED") == "True":
+            make_call(yesterday, act["id"], account_name)
+        # manual call;
+        else:
+            startDate = datetime(int(os.environ["START_YEAR"]), int(os.environ["START_MONTH"]), int(os.environ["START_DAY"]))
+            endDate = datetime(int(os.environ["END_YEAR"]), int(os.environ["END_MONTH"]), int(os.environ["END_DAY"]))
+            datesRange = [startDate + timedelta(days=n) for n in range((endDate - startDate).days + 1)]
 
-        for x in datesRange:
-            make_call(x, act["id"], account_name)
-
+            for x in datesRange:
+                make_call(x, act["id"], account_name)
     # pp.pprint(sorted(headers))
