@@ -140,7 +140,7 @@ if __name__ == "__main__":
     business_accounts = business.get_owned_ad_accounts()
 
     for act in business_accounts:
-        if act["id"] not in ["act_553468422187207"]:
+        if act["id"] not in ["act_397483258659620"]:
             continue
         account_name = act.api_get(fields=[AdAccount.Field.name])["name"]
 
