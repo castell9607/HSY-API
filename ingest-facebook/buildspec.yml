@@ -4,7 +4,7 @@ phases:
     runtime-versions:
       python: 3.x
     commands:
-      - pip3 install facebook_business==10.0.1
+      - pip3 install facebook_business
 
   build:
     commands:
