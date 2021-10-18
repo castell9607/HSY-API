@@ -11,3 +11,13 @@ phases:
       - cd ingest-facebook
       - chmod +x ingest_facebook.py
       - ./ingest_facebook.py
+- cd ingest-facebook
+      - chmod +x ingest_facebook.py
+      - export IS_AUTOMATED=""
+      - export START_YEAR="2021"
+      - export START_MONTH="09"
+      - export START_DAY="01"
+      - export END_YEAR="2021"
+      - export END_MONTH="10"
+      - export END_DAY="16"
+      - ./ingest_facebook.py
