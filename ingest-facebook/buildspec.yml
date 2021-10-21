@@ -9,5 +9,4 @@ phases:
   build:
     commands:
       - cd ingest-facebook
-      - chmod +x ingest_facebook.py
-      - ./ingest_facebook.py      
+      - chmod +x ingest_facebook.py    
