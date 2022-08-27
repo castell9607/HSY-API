@@ -13,7 +13,7 @@ phases:
       - export IS_AUTOMATED=""
       - export START_YEAR="2022"
       - export START_MONTH="08"
-      - export START_DAY="09"
+      - export START_DAY="08"
       - export END_YEAR="2022"
       - export END_MONTH="08"
       - export END_DAY="25"
