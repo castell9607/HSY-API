@@ -135,7 +135,7 @@ if __name__ == "__main__":
     business_id = secrets["facebook_business_id"]
 
     # auth facebook, init;
-    FacebookAdsApi.init(appId, appSecret, accessToken, api_version="v14.0")
+    FacebookAdsApi.init(appId, appSecret, accessToken, api_version="v18.0")
     business = Business(fbid=business_id)
     business_accounts = business.get_owned_ad_accounts()
 
